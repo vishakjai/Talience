@@ -1,0 +1,371 @@
+.app-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.75rem 2rem;
+  background: linear-gradient(135deg, #1e3a8a, #2563eb);
+  color: #f8fafc;
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: 1.75rem;
+}
+
+.app-header p {
+  margin: 0.35rem 0 0;
+  max-width: 38rem;
+  color: rgba(248, 250, 252, 0.9);
+}
+
+.leave-button {
+  background: rgba(248, 250, 252, 0.15);
+  color: #f8fafc;
+  border: 1px solid rgba(248, 250, 252, 0.35);
+  border-radius: 999px;
+  padding: 0.55rem 1.25rem;
+  transition: background 0.2s ease;
+}
+
+.leave-button:hover {
+  background: rgba(248, 250, 252, 0.25);
+}
+
+.setup-panel {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1.25fr);
+  padding: 0 2rem 2rem;
+}
+
+.setup-form {
+  background: #ffffff;
+  border-radius: 1rem;
+  padding: 1.75rem;
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.setup-form h2 {
+  margin: 0;
+  font-size: 1.35rem;
+  color: #0f172a;
+}
+
+.form-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.form-grid label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.form-grid input,
+.form-grid select {
+  padding: 0.65rem 0.75rem;
+  border-radius: 0.65rem;
+  border: 1px solid #cbd5f5;
+  background: #f8fafc;
+  font-size: 0.95rem;
+}
+
+.form-grid input:focus,
+.form-grid select:focus,
+.chat-input textarea:focus {
+  outline: 2px solid #2563eb;
+  outline-offset: 1px;
+}
+
+.form-wide {
+  grid-column: 1 / -1;
+}
+
+.setup-form button[type='submit'] {
+  align-self: flex-start;
+  background: #2563eb;
+  border: none;
+  border-radius: 999px;
+  color: #f8fafc;
+  padding: 0.65rem 1.5rem;
+  font-weight: 600;
+  box-shadow: 0 12px 20px rgba(37, 99, 235, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.setup-form button[type='submit']:disabled {
+  opacity: 0.65;
+  cursor: progress;
+  box-shadow: none;
+}
+
+.setup-form button[type='submit']:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 16px 26px rgba(37, 99, 235, 0.25);
+}
+
+.error-banner {
+  background: rgba(220, 38, 38, 0.12);
+  color: #991b1b;
+  padding: 0.65rem 0.85rem;
+  border-radius: 0.75rem;
+  font-weight: 600;
+}
+
+.job-card {
+  background: #ffffff;
+  border-radius: 1rem;
+  padding: 1.75rem;
+  box-shadow: 0 24px 40px rgba(15, 23, 42, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.job-card h3 {
+  margin: 0;
+  font-size: 1.4rem;
+  color: #0f172a;
+}
+
+.job-meta {
+  margin: 0;
+  display: flex;
+  gap: 0.75rem;
+  color: #475569;
+  font-weight: 600;
+}
+
+.job-card ul {
+  padding-left: 1.25rem;
+  margin: 0.25rem 0 0;
+  display: grid;
+  gap: 0.35rem;
+}
+
+.interview-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+  gap: 1.5rem;
+  padding: 0 2rem 2rem;
+  flex: 1;
+}
+
+.video-panel,
+.chat-panel {
+  background: #ffffff;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 24px 40px rgba(15, 23, 42, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.video-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  min-height: 320px;
+}
+
+.video-participant {
+  background: #0f172a;
+  border-radius: 1rem;
+  color: #e2e8f0;
+  padding: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.video-participant__tracks {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.85rem;
+  min-height: 180px;
+  background: radial-gradient(circle at top, rgba(148, 163, 184, 0.3), rgba(15, 23, 42, 0.8));
+}
+
+.video-track {
+  width: 100%;
+  height: 100%;
+}
+
+.video-element {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0.85rem;
+}
+
+.video-placeholder {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  color: rgba(226, 232, 240, 0.9);
+  font-weight: 600;
+}
+
+.video-participant__identity {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.video-status {
+  padding: 0.65rem 0.85rem;
+  background: rgba(37, 99, 235, 0.08);
+  border-radius: 0.85rem;
+  font-weight: 600;
+  color: #1d4ed8;
+}
+
+.chat-history {
+  flex: 1;
+  overflow-y: auto;
+  border-radius: 1rem;
+  background: #f1f5f9;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.chat-message {
+  background: #ffffff;
+  border-radius: 0.85rem;
+  padding: 0.75rem 1rem;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.chat-message--candidate {
+  border-left: 4px solid #2563eb;
+}
+
+.chat-message--ai {
+  border-left: 4px solid #0ea5e9;
+}
+
+.chat-message--system {
+  border-left: 4px solid #f97316;
+}
+
+.chat-message__meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: #64748b;
+  font-weight: 600;
+}
+
+.chat-message__body {
+  font-size: 0.95rem;
+  color: #0f172a;
+  white-space: pre-wrap;
+}
+
+.chat-empty {
+  text-align: center;
+  color: #475569;
+  font-weight: 600;
+  padding: 2rem 1rem;
+}
+
+.chat-input {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.chat-input textarea {
+  resize: vertical;
+  min-height: 120px;
+  padding: 0.85rem;
+  border-radius: 1rem;
+  border: 1px solid #cbd5f5;
+  font-size: 0.95rem;
+}
+
+.chat-input button {
+  align-self: flex-end;
+  background: #0ea5e9;
+  color: #f0f9ff;
+  border: none;
+  border-radius: 999px;
+  padding: 0.65rem 1.5rem;
+  font-weight: 600;
+  box-shadow: 0 10px 20px rgba(14, 165, 233, 0.25);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.chat-input button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.chat-input button:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 14px 24px rgba(14, 165, 233, 0.35);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+@media (max-width: 1024px) {
+  .setup-panel,
+  .interview-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .setup-panel {
+    padding: 0 1.25rem 1.5rem;
+  }
+
+  .interview-layout {
+    padding: 0 1.25rem 1.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .app-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .leave-button {
+    align-self: flex-end;
+  }
+
+  .video-grid {
+    min-height: 260px;
+  }
+}
