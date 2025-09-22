@@ -1,1 +1,38 @@
-[]
+[
+  {
+    "id": "frontend-engineer",
+    "title": "Frontend Engineer",
+    "department": "Product Engineering",
+    "level": "Mid-level",
+    "summary": "Own the end-to-end experience for our interview intelligence product and craft highly-performant TypeScript applications.",
+    "coreCompetencies": [
+      "React and component design",
+      "TypeScript and modern build tooling",
+      "WebRTC media streaming",
+      "Testing and accessibility best practices"
+    ],
+    "conversationPrompts": [
+      "Walk me through a recent UI you architected end-to-end. How did you decide on the component boundaries?",
+      "How do you monitor the quality and performance of a production React application?",
+      "Describe a time you had to debug a difficult WebRTC issue. What strategies did you use?"
+    ]
+  },
+  {
+    "id": "ml-engineer",
+    "title": "Machine Learning Engineer",
+    "department": "Intelligence",
+    "level": "Senior",
+    "summary": "Build and deploy production-ready ML systems that power the Talience interviewing agent.",
+    "coreCompetencies": [
+      "Designing evaluation frameworks for LLM-based systems",
+      "Prompt engineering and model fine-tuning",
+      "MLOps and model observability",
+      "Python data tooling"
+    ],
+    "conversationPrompts": [
+      "Tell me about a model you trained that improved a key business metric. How did you evaluate success?",
+      "How do you approach safeguarding an LLM-powered application against hallucinations?",
+      "Describe your workflow for deploying and monitoring ML models in production."
+    ]
+  }
+]
